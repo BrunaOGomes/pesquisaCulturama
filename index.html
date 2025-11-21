@@ -39,10 +39,15 @@
           <input type="email" name="UserEmail" id="email" required>
           <br>
           <label for="phoneNumber">Número de Celular: </label>
-          <input type="tel" id="phoneNumber" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="(00)000000000">
+          <input type="tel" id="phoneNumber"
+           name="userPhoneNumber"
+            pattern="[0-9]{11}"
+             placeholder="(00)000000000" aria-describedby="phoneHelp">
+             <small id="phoneHelp">Preencha com 11 digitos no formato DDD + numeros sem espaços ou hifen</small>
           <br>
           <label for="upload">Upload</label>
-          <input type="file" id="upload" accept="image/*" name="userImage">
+          <input type="file" id="upload" accept="image/*" name="userImage" aria-describedby="imageHelp">
+          <small id="imageHelp">Envie uma foto formato PNG ou JPEG</small>
           <br>
         </fieldset>
         <fieldset>
@@ -150,8 +155,8 @@
           <input type="checkbox" id="result" name="receiveResultEmails" required>
           <label for="resul">Aceito os termos e condições.</label>
         </fieldset>
-        <button type="submit">Enviar</button>
-        <button type="reset">Limpar</button>
+        <button type="submit" aria-label="enviar dados do formulario">Enviar</button>
+        <button type="reset"  aria-label="limpar dados do formulario">Limpar</button>
       </form>
     </section>
     </main>
